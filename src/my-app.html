@@ -1,0 +1,320 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/vaadin-board/vaadin-board.html">
+<link rel="import" href="my-icons.html">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+<dom-module id="my-app">
+  <template>
+    <style>
+      :host {
+        --app-primary-color: var(--charcoal);
+        --app-secondary-color: var(--snow);
+        display: block;
+        padding: 8px;
+        /*max-width: 1000px;*/
+        margin: 0 auto;
+      }
+
+      h1, h2, h3, h4 {
+        padding: 8px 8px;
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      h1 {
+        font-size: 48px;
+        padding:0 0 16px 24px;
+        color: var(--water);
+        overflow: hidden;
+      }
+
+      h2 {
+        padding: 8px 0 8px 0;
+        color: var(--water);
+
+      }
+      h3 {
+        padding: 0;
+      }
+
+      h4 {
+        line-height: 32px;
+        padding:0;
+      }
+      .columnHeader {
+        padding: 16px 8px;
+      }
+      .item {
+        display: block;
+        padding: 16px;
+        font-weight: bold;
+        border-style: solid;
+        border-width: 3px;
+        border-color: #fff;
+        background-color: #cacaca;
+      }
+
+      .name {
+        border-top:1px solid #dedede;
+      }
+      .progress {
+        padding-bottom:8px;
+
+      }
+
+      .projectName {
+        font-weight: bold;
+      }
+
+      .projectProgress {
+      }
+      .progressBackground {
+        background-color: var(--snow);
+        border: 4px solid black;
+      }
+      .progressBar {
+        background-color: var(--salmon);
+        color: var(--snow);
+        padding-left: 4px;
+        box-sizing: border-box;
+      }
+      .description {
+        padding-top:4px;
+        padding-bottom: 8px;
+      }
+
+      .headers.small {
+        visibility: hidden;
+        height: 0;
+      }
+
+      .column {
+        padding: 0 24px;
+        box-sizing: border-box;
+      }
+
+
+    </style>
+
+    <h1>#RoadToPlatform</h1>
+    <vaadin-board>
+      <vaadin-board-row id="root">
+        <div class="column">
+          <h2>Core</h2>
+          <vaadin-board>
+            <vaadin-board-row class="headers">
+               <h3>Project</h3>
+               <h3>Progress</h3>
+            </vaadin-board-row>
+            <!-- Flow -->
+            <vaadin-board-row class="name">
+               <h2>Flow</h2>
+            </vaadin-board-row>
+            <vaadin-board-row class="progress">
+               <h4>Completion</h4>
+               <div class="projectProgress">
+                 <div class="progressBackground">
+                   <div class="progressBar" style="width:20%">20%</div>
+                 </div>
+               </div>
+            </vaadin-board-row>
+            <vaadin-board-row>
+               <div class="description">The Java framework to build rich web applications and web sites with the help of web components and Polymer's templating lanugage.</div>
+            </vaadin-board-row>
+
+            <!-- Core Elements -->
+            <vaadin-board-row class="name">
+               <h2>Core Elements</h2>
+            </vaadin-board-row>
+
+            <vaadin-board-row class="progress">
+               <h4>Web Components</h4>
+               <div class="projectProgress">
+                 <div class="progressBackground">
+                   <div class="progressBar" style="width:50%">50%</div>
+                 </div>
+               </div>
+            </vaadin-board-row>
+
+            <vaadin-board-row class="progress">
+               <h4>Flow API</h4>
+               <div class="projectProgress">
+                 <div class="progressBackground">
+                   <div class="progressBar" style="width:0%;color:black">0%</div>
+                 </div>
+               </div>
+            </vaadin-board-row>
+
+            <vaadin-board-row>
+               <div class="description">Top notch web components for business applications.</div>
+            </vaadin-board-row>
+          </vaadin-board>
+        </div>
+        <div class="column">
+          <h2>Pro</h2>
+          <vaadin-board>
+            <vaadin-board-row class="headers">
+               <h3>Project</h3>
+               <h3>Progress</h3>
+            </vaadin-board-row>
+            <!-- Designer -->
+            <vaadin-board-row class="name">
+               <h2>Designer 3</h2>
+            </vaadin-board-row>
+            <vaadin-board-row class="progress">
+               <h4>For Flow</h4>
+               <div class="projectProgress">
+                 <div class="progressBackground">
+                   <div class="progressBar" style="width:50%">50%</div>
+                 </div>
+               </div>
+            </vaadin-board-row>
+            <vaadin-board-row>
+               <div class="description">Visually edit the Polymer templates that Flow is using, giving a massive speed boost to the developer.</div>
+            </vaadin-board-row>
+
+            <!-- Orders -->
+            <vaadin-board-row class="name">
+               <h2>Orders App Template</h2>
+            </vaadin-board-row>
+
+            <vaadin-board-row class="progress">
+               <h4>For Polymer</h4>
+               <div class="projectProgress">
+                 <div class="progressBackground">
+                   <div class="progressBar" style="width:0%;color:black">0%</div>
+                 </div>
+               </div>
+            </vaadin-board-row>
+
+
+            <vaadin-board-row class="progress">
+               <h4>For Flow</h4>
+               <div class="projectProgress">
+                 <div class="progressBackground">
+                   <div class="progressBar" style="width:0%;color:black">0%</div>
+                 </div>
+               </div>
+            </vaadin-board-row>
+
+            <vaadin-board-row>
+               <div class="description">Base project for building professional web applications from day 1. Don't waste time in figuring out architecture.</div>
+            </vaadin-board-row>
+
+
+            <!-- Charts -->
+            <vaadin-board-row class="name">
+               <h2>Charts</h2>
+            </vaadin-board-row>
+
+            <vaadin-board-row class="progress">
+               <h4>Web Component</h4>
+               <div class="projectProgress">
+                 <div class="progressBackground">
+                   <div class="progressBar" style="width:95%;">95%</div>
+                 </div>
+               </div>
+            </vaadin-board-row>
+
+
+            <vaadin-board-row class="progress">
+               <h4>For Flow</h4>
+               <div class="projectProgress">
+                 <div class="progressBackground">
+                   <div class="progressBar" style="width:0%;color:black">0%</div>
+                 </div>
+               </div>
+            </vaadin-board-row>
+
+            <vaadin-board-row>
+               <div class="description">Visualize your data with beautiful graphs.</div>
+            </vaadin-board-row>
+
+            <!-- Security -->
+            <vaadin-board-row class="name">
+               <h2>Security</h2>
+            </vaadin-board-row>
+
+            <vaadin-board-row class="progress">
+               <h4>For Flow</h4>
+               <div class="projectProgress">
+                 <div class="progressBackground">
+                   <div class="progressBar" style="width:0%;color:black">0%</div>
+                 </div>
+               </div>
+            </vaadin-board-row>
+
+            <vaadin-board-row>
+               <div class="description">Add authorization and authentincation to your application and secure your data in just a few minutes.</div>
+            </vaadin-board-row>
+
+            <!-- Testbench -->
+            <vaadin-board-row class="name">
+               <h2>TestBench</h2>
+            </vaadin-board-row>
+
+            <vaadin-board-row class="progress">
+               <h4>For Flow</h4>
+               <div class="projectProgress">
+                 <div class="progressBackground">
+                   <div class="progressBar" style="width:0%;color:black">0%</div>
+                 </div>
+               </div>
+            </vaadin-board-row>
+
+            <vaadin-board-row>
+               <div class="description">Build integration tests to your business applciations and be sure that changes doesn't accidentally break existing features.</div>
+            </vaadin-board-row>
+
+
+            <!-- Spreadsheet -->
+            <vaadin-board-row class="name">
+               <h2>Spreadsheet</h2>
+            </vaadin-board-row>
+
+            <vaadin-board-row class="progress">
+               <h4>For Flow</h4>
+               <div class="projectProgress">
+                 <div class="progressBackground">
+                   <div class="progressBar" style="width:0%;color:black">0%</div>
+                 </div>
+               </div>
+            </vaadin-board-row>
+
+            <vaadin-board-row>
+               <div class="description">Integrate spreadsheets into your web applications.</div>
+            </vaadin-board-row>
+          </vaadin-board>
+        </div>
+      </vaadin-board-row>
+    </vaadin-board>
+  </template>
+
+  <script>
+    class MyApp extends Polymer.Element {
+
+      static get is() { return 'my-app'; }
+
+      static get properties() {
+        return {
+        };
+      }
+
+      ready() {
+        super.ready();
+        console.log(this.$.root._ONE_COLUMN_MAX_WIDTH);
+        this.$.root._ONE_COLUMN_MAX_WIDTH=600;
+        this.$.root._TWO_COLUMNS_MAX_WIDTH=10000;
+        this.$.root.redraw();
+        // When possible, use afterNextRender to defer non-critical
+        // work until after first paint.
+        Polymer.RenderStatus.afterNextRender(this, function() {
+
+        });
+      }
+
+    }
+
+    window.customElements.define(MyApp.is, MyApp);
+  </script>
+</dom-module>
